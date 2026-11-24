@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Колесо фортуны — § 23</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap&subset=cyrillic" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Колесо фортуны</h1>
+  <p class="sub">§ 23. Поведение насекомых. Размножение и типы развития</p>
+  <div class="bar"><div id="score">0 из 8</div><button id="sound" title="Звук">🔊</button></div>
+</header>
+<main>
+  <div class="stage">
+    <div id="pointer"></div>
+    <div class="wheelbox">
+      <div id="bulbs"></div>
+      <canvas id="wheel" width="800" height="800"></canvas>
+      <div class="hub">★</div>
+    </div>
+  </div>
+  <button id="spin">Крутить</button>
+</main>
+<div class="overlay" id="modal"><div class="card">
+  <div class="qnum" id="qnum"></div>
+  <h2 id="qtext"></h2>
+  <div id="answers"></div>
+  <div id="result" hidden><p id="verdict"></p><p id="expl"></p><button id="next">Дальше</button></div>
+</div></div>
+<div class="overlay" id="final"><div class="card final">
+  <div class="trophy">🏆</div><h2>Игра окончена!</h2>
+  <p id="finalText"></p><button id="restart">Начать заново</button>
+</div></div>
+<canvas id="confetti"></canvas>
+<script src="questions.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
